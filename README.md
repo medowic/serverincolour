@@ -7,13 +7,13 @@
 # What is it?
 
 ### ServerInColour is a convenient and more informative login page to the server
-**There is nothing superfluous here, just the information you need about the system. It is painted in different colors depending on the load (50% of the load is orange, 80% is red).**
+**There is nothing superfluous here, just the information you need about the system. It is painted in different colors depending on the load (>50% of the load is orange, >75% is red).**
 
 # Getting started!
 
-We want to present SIC as a cross-platform script that will work on all Linux systems.
+We want to present **SIC** as a cross-platform script that will work on all Linux systems.
 However, we cannot guarantee performance on all Linux systems.
-Therefore, we offer a list of tested systems where SIC will be guaranteed to work:
+Therefore, we offer a list of tested systems where **SIC** will be guaranteed to work:
 
 - Debian 12 (Tested ✅)
 - Ubuntu 22.04 LTS (Tested ✅)
@@ -36,7 +36,7 @@ or
 chmod u+x ./serverincolour/install.sh
 ./serverincolour/install.sh
 ```
-4. Done! Now ServerInColour will be launched every time the user logs in.
+4. **Done!** Now ServerInColour will be launched every time the user logs in.
 
 ## Uninstall
 1. Log in as root:
@@ -52,7 +52,7 @@ or
 chmod u+x ./serverincolour/uninstall.sh
 ./serverincolour/uninstall.sh
 ```
-3. Done. Now you will see the standard login page of the system.
+3. **Done.** Now you will see the standard login page of the system.
 
 # License
 This is project is under the [MIT License](https://raw.githubusercontent.com/medowic/serverincolour/master/LICENSE).
