@@ -1,5 +1,7 @@
 # ServerInColour (SIC) - minimizing excess in your work environment
 
+![ServerInColour Demonstration Screenshot](/img/first-banner.jpg)
+
 *We offer **ServerInColour** as a more readable and informative server login homepage. **Compare ServerInColour and the standard Ubuntu Server login page.***
 
 # What is it?
