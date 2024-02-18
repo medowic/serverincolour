@@ -1,22 +1,20 @@
-# ServerInColour (SIC) - minimizing excess in your work environment
+# ServerInColour - minimizing excess in your work environment
 
 ![ServerInColour Demonstration Screenshot](/img/first-banner.jpg)
 
-*We offer **ServerInColour** as a more readable and informative server login homepage. **Compare ServerInColour and the standard Ubuntu Server login page.***
-
 # What is it?
 
-### ServerInColour is a convenient and more informative login page to the server
+### ServerInColour is a minimalistic and colorful homepage that see every time when user log on
 **There is nothing superfluous here, just the information you need about the system. It is painted in different colors depending on the load (>50% of the load is orange, >75% is red).**
 
 # Getting started!
 
 We want to present **SIC** as a cross-platform script that will work on all Linux systems.
-However, we cannot guarantee performance on all Linux systems.
-Therefore, we offer a list of tested systems where **SIC** will be guaranteed to work:
+However, we cannot guarantee support on all Linux systems.
+There a list of tested systems where **SIC** will be guaranteed to work:
 
-- Debian 12 (Tested ✅)
-- Ubuntu 22.04 LTS (Tested ✅)
+- Debian >= 11 (Tested ✅)
+- Ubuntu >= 22.04 (Tested ✅)
 
 ## Install
 1. Log in as root:
