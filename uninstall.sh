@@ -17,7 +17,6 @@ fi
 
 if [ -f /etc/systemd/system/sic-update.service ] || [ -d /root/.serverincolour ]; then
     rm -rf /root/.serverincolour
-    rm -d /root/.serverincolour
     rm /etc/systemd/system/sic-update.service
     systemctl daemon-reload >/dev/null 2>&1
 fi
