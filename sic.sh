@@ -155,19 +155,19 @@ function disksCheck() {
     DISK_MASSIVE=0
     DISK_STR=1
 
-    while [ -n "$(df -h | grep /dev/sd | awk -F'[[:space:]]*' '{print $1}' | sed "${DISK_STR}q;d")" ]; do
+    while [ -n "$(df -h | grep -Ev tmpfs | grep /dev/ | awk -F'[[:space:]]*' '{print $1}' | sed "${DISK_STR}q;d")" ]; do
 
-        DISK_NAME=$(df -h | grep /dev/sd | awk -F'[[:space:]]*' '{print $1}' | sed "${DISK_STR}q;d")
+        DISK_NAME=$(df -h | grep -Ev tmpfs | grep /dev/ | awk -F'[[:space:]]*' '{print $1}' | sed "${DISK_STR}q;d")
 
         DISKS[DISK_MASSIVE]="${DISK_NAME}"
 
-        DISK_SPACE_ALL[DISK_MASSIVE]=$(df | grep /dev/sd | awk -F'[[:space:]]*' '{print $2}' | sed "${DISK_STR}q;d")
-        DISK_SPACE_TAKE[DISK_MASSIVE]=$(df | grep /dev/sd | awk -F'[[:space:]]*' '{print $3}' | sed "${DISK_STR}q;d")
+        DISK_SPACE_ALL[DISK_MASSIVE]=$(df | grep -Ev tmpfs | grep /dev/ | awk -F'[[:space:]]*' '{print $2}' | sed "${DISK_STR}q;d")
+        DISK_SPACE_TAKE[DISK_MASSIVE]=$(df | grep -Ev tmpfs | grep /dev/ | awk -F'[[:space:]]*' '{print $3}' | sed "${DISK_STR}q;d")
 
-        DISK_SPACE_ALL_HUMAN[DISK_MASSIVE]=$(df -h | grep /dev/sd | awk -F'[[:space:]]*' '{print $2}' | sed "${DISK_STR}q;d")
-        DISK_SPACE_TAKE_HUMAN[DISK_MASSIVE]=$(df -h | grep /dev/sd | awk -F'[[:space:]]*' '{print $3}' | sed "${DISK_STR}q;d")
+        DISK_SPACE_ALL_HUMAN[DISK_MASSIVE]=$(df -h | grep -Ev tmpfs | grep /dev/ | awk -F'[[:space:]]*' '{print $2}' | sed "${DISK_STR}q;d")
+        DISK_SPACE_TAKE_HUMAN[DISK_MASSIVE]=$(df -h | grep -Ev tmpfs | grep /dev/ | awk -F'[[:space:]]*' '{print $3}' | sed "${DISK_STR}q;d")
 
-        DISK_MOUNT_NAME[DISK_MASSIVE]=$(df -h | grep /dev/sd | awk -F'[[:space:]]*' '{print $6}' | sed "${DISK_STR}q;d")
+        DISK_MOUNT_NAME[DISK_MASSIVE]=$(df -h | grep -Ev tmpfs | grep /dev/ | awk -F'[[:space:]]*' '{print $6}' | sed "${DISK_STR}q;d")
 
         DISK_FOUND_IN_MASSIVE="${DISK_MASSIVE}"
         ((DISK_MASSIVE = DISK_MASSIVE + 1))
